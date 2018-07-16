@@ -6,11 +6,12 @@ public class DIManagerCajaHerramientas {
 
     private static ComponenteCajaHerramientas sComponente;
 
-    public static void init() {
-        sComponente = DaggerComponenteCajaHerramientas.builder().build();
-    }
-
     public static ComponenteCajaHerramientas getComponente() {
+
+        if (sComponente == null) {
+            sComponente = DaggerComponenteCajaHerramientas.builder().build();
+        }
+
         return sComponente;
     }
 }

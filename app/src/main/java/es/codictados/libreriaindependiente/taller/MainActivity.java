@@ -22,19 +22,16 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
-    }
-
-    @OnClick({R.id.nuevo_martillo, R.id.nueva_grasa})
-    public void onClick(Button button) {
-        if (button.getId() == R.id.nueva_grasa) {
-            incluirResultado(new Grasa().getDescripcion());
-        } else {
-            incluirResultado(new MartilloPercutor().getDescripcion());
-        }
+        incluirResultado(new Grasa().getDescripcion());
+        incluirResultado(new Grasa().getDescripcion());
+        incluirResultado(new Grasa().getDescripcion());
+        incluirResultado(new MartilloPercutor().getDescripcion());
+        incluirResultado(new MartilloPercutor().getDescripcion());
+        incluirResultado(new MartilloPercutor().getDescripcion());
     }
 
     private void incluirResultado(String resultado) {
-        String nuevoResultado = resultados.getText() + "\n" + resultado + "\n";
+        String nuevoResultado = resultados.getText() + resultado + "\n\n";
         resultados.setText(nuevoResultado);
         scrollHastaElFinal();
     }

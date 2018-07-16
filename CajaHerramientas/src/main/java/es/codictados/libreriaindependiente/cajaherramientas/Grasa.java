@@ -16,7 +16,7 @@ public class Grasa {
 
     public String getDescripcion() {
         return "Grasa n.º " + hashCode() + " " + mFormula +
-                "Duración: " + usos + " usos." ;
+                " Duración: " + usos + " usos." ;
     }
 
     public String usar() {
